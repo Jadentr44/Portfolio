@@ -17,11 +17,17 @@ transition: 550ms;
   display: flex;
   align-items: center;
 }
+
 #intro #text{
   width: 50%;
-  margin: auto;
+  transition: 300ms;
 }
-
+h1{
+  font-size: 300%;
+}
 .fa-gear{
   font-size: 1.7rem;
+}
+.hover{
+  cursor: pointer;
 }
