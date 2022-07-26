@@ -21,6 +21,7 @@ transition: 550ms;
   width: 50%;
   margin: auto;
 }
-i{
-  color: gainsboro;
+
+.fa-gear{
+  font-size: 1.7rem;
 }
