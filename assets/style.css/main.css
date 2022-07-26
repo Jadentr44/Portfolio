@@ -17,7 +17,10 @@ nav a:hover{
 border-color: #FF5656;
 transition: 550ms;
 }
-
+.fa-gear{
+  font-size: 1.1rem;
+}
+/*  */
 #welcome{
   height: 100vh;
 }
@@ -25,27 +28,15 @@ transition: 550ms;
   height: 100%;
   margin: 0 10%;
 }
-
-.hover{
-  cursor: pointer;
-} 
-/* #intro{
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.intro{
-  display: flex;
-  justify-content: space-around;
-  margin: 0 9%;
-}
-#intro #text{
-  width: 50%;
-}
 h1{
-  font-size: 300%;
+  font-size: 3. rem;
 }
-.fa-gear{
-  font-size: 1.7rem;
+img{
+  width: 85%;
+  border-radius: 10%;
+  border: 3px double black;
 }
+.hover:hover{
+  cursor: pointer;
+  color: #FF5656;
+} 
