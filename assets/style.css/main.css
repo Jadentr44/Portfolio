@@ -21,7 +21,14 @@ transition: 550ms;
 #welcome{
   height: 100vh;
 }
+.row{
+  height: 100%;
+  margin: 0 10%;
+}
 
+.hover{
+  cursor: pointer;
+} 
 /* #intro{
   height: 100vh;
   display: flex;
@@ -42,6 +49,3 @@ h1{
 .fa-gear{
   font-size: 1.7rem;
 }
-.hover{
-  cursor: pointer;
-} */
