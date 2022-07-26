@@ -12,3 +12,4 @@ $( ".hover" ).hover(function() {
   }
   
 })
+console.log()

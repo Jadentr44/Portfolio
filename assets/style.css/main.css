@@ -1,8 +1,14 @@
+/* global */
+body{
+  margin: 0;
+  overflow-x: hidden;
+}
+/* the navbar */
 nav a{
   text-decoration: none;
   border-bottom: 3px white solid;
   font-size: 1.5rem;
-  transition: 550ms;
+  transition: 200ms;
 }
 nav a:hover{
   transition: 550ms;
@@ -10,17 +16,23 @@ border-color: black;
 transition: 550ms;
 }
 
+#welcome{
+  height: 100vh;
+}
 
-
-#intro{
+/* #intro{
   height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
-
+.intro{
+  display: flex;
+  justify-content: space-around;
+  margin: 0 9%;
+}
 #intro #text{
   width: 50%;
-  transition: 300ms;
 }
 h1{
   font-size: 300%;
@@ -30,4 +42,4 @@ h1{
 }
 .hover{
   cursor: pointer;
-}
+} */
