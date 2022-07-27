@@ -8,14 +8,18 @@ body{
 
 nav a{
   text-decoration: none;
+  
+  -webkit-text-stroke: 2px black;
   border-bottom: 3px #F7F4EE solid;
   font-size: 1.5rem;
   transition: 200ms;
 }
 nav a:hover{
-  transition: 550ms;
 border-color: #FF5656;
 transition: 550ms;
+}
+nav{
+  background-color: #F7F4EE;
 }
 .fa-gear{
   font-size: 1.1rem;
@@ -23,16 +27,21 @@ transition: 550ms;
 /*  */
 #welcome{
   height: 100vh;
+  background-image: url();
+  background-size: cover;
 }
-.row{
+#welcome .row, .aboutMe{
   height: 100%;
   margin: 0 10%;
+  text-align: center;
 }
 h1{
-  font-size: 3. rem;
+  -webkit-text-stroke: 2px black;
+  color: white;
+  font-size: 350%;
 }
 img{
-  width: 85%;
+  width: 95%;
   border-radius: 10%;
   border: 3px double black;
 }
