@@ -3,7 +3,7 @@ $( ".hover" ).hover(function() {
   let child = $(this).parent().children().eq(1)
 
   if(parent.data('link') === 'true'){
-    child.css('color',"white")
+    child.css('color',"#F7F4EE")
     child.text(child.attr('id'))
     parent.data('link','false')
   }else{
