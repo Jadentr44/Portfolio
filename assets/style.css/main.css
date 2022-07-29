@@ -69,11 +69,17 @@ img{
 }
 
 /* about me */
-.aboutMe{
+.aboutMe, .skills{
   margin-top: 10% ;
 }
 h2{
   font-size: 250%;
   -webkit-text-stroke: 1px black;
   color: #2B3B40;
+}
+.skillIcons svg{
+  border: #FF5656 solid 1px;
+  background-color: white;
+  border-radius:50%;
+  font-size: 350%;
 }
