@@ -13,4 +13,13 @@ $( ".hover" ).hover(function() {
   }
   
 })
-console.log("saidy was a huge support in this <3")
+
+$( ".skill" ).hover(function() {
+  if($('.skillName').text() == ''){
+
+    let skillName = $(this).attr("id")
+    $('.skillName').text(skillName)
+  }else{
+    $('.skillName').text('')
+  }
+})
