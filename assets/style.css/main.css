@@ -3,7 +3,7 @@
 body{
   margin: 0;
   overflow-x: hidden;
-  background-color: #F7F4EE;
+  /* background-color: #F7F4EE; */
 }
 /* the navbar */
 nav p{
@@ -13,7 +13,7 @@ nav p{
 nav a{
   text-decoration: none;
   color: black;
-  border-bottom: 3px #2B3B40 solid;
+  border-bottom: 3px rgb(0, 0, 0,.0) solid;
   font-size: 1.5rem;
   transition: 200ms;
   
@@ -23,7 +23,7 @@ border-color: #FF5656;
 transition: 550ms;
 }
 nav{
-  background-color: #2B3B40;
+  background-color: black;
 }
 .fa-gear{
   font-size: 1.1rem;
@@ -33,7 +33,7 @@ nav{
 /*  */
 #welcome{
   height: 100vh;
-  background-color: #2B3B40;
+  /* background-color: #2B3B40; */
 }
 #welcome .row, .aboutMe,.skills{
   height: 100%;
@@ -41,9 +41,13 @@ nav{
   text-align: center;
 }
 #welcome h1{
+  -webkit-text-stroke: 2px white;
+  color: white;
+  font-size: 500%;
+}
+#welcome .link{
   -webkit-text-stroke: 2px black;
-  color: #F7F4EE;
-  font-size: 420%;
+  /* color: #F7F4EE; */
 }
 img{
   width: 100%;
