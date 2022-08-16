@@ -1,10 +1,9 @@
 /* global */
 
 body{
-  margin: 0;
   overflow-x: hidden;
-  /* background-color: #F7F4EE; */
 }
+
 /* the navbar */
 nav p{
   margin-bottom: 0;
@@ -25,6 +24,7 @@ transition: 550ms;
 nav{
   background-color: black;
 }
+
 .fa-gear{
   font-size: 1.1rem;
   -webkit-text-stroke: 2px black;
@@ -52,7 +52,6 @@ nav{
 img{
   width: 100%;
   border-radius: 10%;
-  border: 3px double black;
 }
 .hover:hover{
   cursor: pointer;
