@@ -131,30 +131,18 @@ $('.socialHover').hover(function(e){
 
 
 
-$( ".hover" ).hover(function() {
-  let parent =  $(this).parent()
-  let child = $(this).parent().children().eq(1)
 
-  if(parent.data('link') === 'true'){
-    // hover off
-    child.css('color',"white")
-    child.text(child.attr('id'))
-    parent.data('link','false')
-  }else{
-    // hover on
-    child.css('color',"rgb(0,0,0,.0)")
-    child.text($(this).attr('id'))
-    parent.data('link','true')
-  }
-  
-})
-
+let skillState = false
 $( ".skill" ).hover(function() {
-  if($('.skillName').text() == ''){
+  if(!skillState){
 
     let skillName = $(this).attr("id")
     $('.skillName').text(skillName)
+    $('.skillName').removeClass("invisible")
+    $('.skillName').addClass("visible")
   }else{
-    $('.skillName').text('')
+    $('.skillName').addClass("invisible")
+    $('.skillName').removeClass("visible")
   }
+  skillState = !skillState
 })
