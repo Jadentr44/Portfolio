@@ -72,6 +72,65 @@ dot.prototype.move = function() {
 render();
 // hover affect on welcome
 
+$('.socialHover').hover(function(e){
+  console.log(e.target)
+  let link = e.target.id;
+  let text;
+  let linkStatus = $(e.target).data('link');
+
+  if(linkStatus){
+    //changing to the original text
+
+    //toggle the state
+    $(e.target).data('link',false)
+
+    //changing linkedin back
+    if(link === 'github') {
+      text = $('#gitText')
+      text.css('color',"white")
+      text.text("Jaden")
+    }
+    //changing linkedin back
+    if(link === 'linkedin') {
+      text = $('#LN-Text')
+      text.css('color',"white")
+      text.text("Rodriguez")
+    }
+    //changing linkedin back
+    if(link === 'email') {
+      text = $('#emailText')
+      text.css('color',"white")
+      text.text("JS Developer")
+    }
+  }else{
+    //change text to the link name 
+
+    //toggle the state
+    $(e.target).data('link',true)
+
+    //show moving code when linkedin is hovered
+    if(link === 'github') {
+      text = $('#gitText')
+      text.css('color',"rgb(0,0,0,.0)")
+      text.text("Github")
+    }
+    if(link === 'linkedin') {
+      text = $('#LN-Text')
+      text.css('color',"rgb(0,0,0,.0)")
+      text.text("Linkedin")
+    }
+    if(link === 'email') {
+      text = $('#emailText')
+      text.css('color',"rgb(0,0,0,.0)")
+      text.text("email")
+    }
+
+  }
+})
+
+
+
+
 $( ".hover" ).hover(function() {
   let parent =  $(this).parent()
   let child = $(this).parent().children().eq(1)

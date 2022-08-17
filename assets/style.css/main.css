@@ -41,7 +41,7 @@ nav{
   text-align: center;
 }
 #welcome h1{
-  -webkit-text-stroke: 2px white;
+  -webkit-text-stroke: 1px white;
   color: white;
   font-size: 500%;
 }
@@ -95,4 +95,8 @@ h2{
 }
 .DB:hover{
   background-color: lightgreen;
+}
+
+.text-left{
+  text-align: left;
 }
