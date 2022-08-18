@@ -49,7 +49,7 @@ dot.prototype.draw = function() {
   var dx = halfx + this.rad_x * Math.cos(this.alpha / 180 * Math.PI);
   var dy = halfy + this.rad_y * Math.sin(this.alpha / 180 * Math.PI);
   // set color
-  context.fillStyle = "rgb(" + this.color + "," + this.color + "," + this.color + ")";
+  context.fillStyle = "white";
   // draw dot
   context.fillRect(dx, dy, this.size, this.size);
   
