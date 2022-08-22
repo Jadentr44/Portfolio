@@ -141,15 +141,18 @@ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 /* media queries */
 
 /* small devices: tablet and large phones 600 px and up */
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:992px) {
   #splash img{
-    visibility: hidden;
+    display: none;
   }
   #splash .icon{
     visibility: hidden;
   }
   #splash h1{
-    font-size: 2rem;
+    font-size: 7vw;
+  }
+  .splashText h1{
+    text-align: center;
   }
   
 }
@@ -158,5 +161,8 @@ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 @media only screen and (min-width: 992px) {
   #splash img{
     visibility: visible;
+  }
+  .splashText{
+    text-align: left;
   }
 }
