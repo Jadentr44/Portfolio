@@ -1,0 +1,14 @@
+/* custom tags */
+
+.bg-black{
+  background-color: black;
+}
+/* color gradient */
+.BtoW{
+  background-image: linear-gradient(black,white);
+  height: 13vh;
+}
+.WtoB{
+  background-image: linear-gradient(white,black);
+  height: 13vh;
+}

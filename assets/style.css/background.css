@@ -1,7 +1,7 @@
 body{
   position: relative;
 }
-.backG,
+.splashBg,
 canvas {
   z-index: -10;
   position: absolute;
