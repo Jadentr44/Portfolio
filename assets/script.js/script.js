@@ -192,7 +192,6 @@ floatIn("JS Developer","emailText",200)
 
 
 
-
 // function floatChange(text,divID){
 //   let div = $(`#${divID}`)
 //   let textArr = text.split("")
