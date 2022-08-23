@@ -1,8 +1,12 @@
 /* global */
 
 body{
-  overflow: hidden;
   width: 100%;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
 /* custom tags */
