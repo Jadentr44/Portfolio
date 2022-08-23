@@ -152,8 +152,8 @@ section{
 
   .skillIcons img{
     border: black solid 1px;
-    width: 12vw;
-    height: 12vw;
+    width: 22vw;
+    height: 22vw;
     background-color: white;
     border-radius:50%;
   }
