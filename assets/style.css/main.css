@@ -92,7 +92,7 @@ img{
 #skills img:hover{
   transition: .3s;
   transform: scale(1.15);
-box-shadow: 0 10px 20px rgba(255,0,0,.6), 0 4px 8px rgba(0,0,0,.06);
+box-shadow: 0 10px 20px rgba(255,0,0,.6), 0 4px 8px rgba(200,0,0,.6);
 border: #FF5656 solid 3px;
 }
 
@@ -179,4 +179,11 @@ section{
     background-color: white;
     border-radius:50%;
   }
+}
+
+
+
+.big{
+  font-size: 20%;
+  transition: all 100ms linear;
 }

@@ -13,7 +13,7 @@ var context = canvas.getContext("2d");
 var dotCount = 200;
 var dots = [];
 // create dots
-for (var i = 0; i < dotCount; i++) {
+for (let i = 0; i < dotCount; i++) {
   dots.push(new dot());
 }
 
@@ -51,7 +51,7 @@ dot.prototype.draw = function() {
   // set color
   context.fillStyle = "white";
   // draw dot
-  context.fillRect(dx, dy, this.size, this.size);
+  context.fillRect(dx, dy, this.size/2, this.size/2);
   
 };
 
@@ -146,3 +146,68 @@ $( ".skill" ).hover(function() {
   }
   skillState = !skillState
 })
+
+
+
+function floatIn(text,divID,time){
+let div = $(`#${divID}`)
+let textArr = text.split("")
+
+textArr.forEach((e,i) => {
+  setTimeout(() => {
+    
+    let span = $("<span>")
+    span.text(e)
+    span.animate({fontSize: "100%" }, time );
+    // span.addClass('big')
+    // setTimeout(() => {span.removeClass('big')},200)
+    div.append(span)
+  }, time/2*i)
+});
+
+
+console.log(textArr)
+}
+
+
+
+
+
+floatIn("jaden","gitText",450)
+floatIn("Rodriguez","LN-Text",280)
+floatIn("JS Developer","emailText",200)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function floatChange(text,divID){
+//   let div = $(`#${divID}`)
+//   let textArr = text.split("")
+//   let divTextArr = div.text()
+//   console.log(div.children().toArray())
+
+//   div.children().toArray().forEach((e,i) => {
+//     setTimeout(() => {
+//     e.animate({fontSize: "5%" }, 500 );
+//     },200*i)
+
+//     setTimeout(() => {
+//       e.remove()
+//       },300 * divTextArr.length)
+//   });
+  
+  
+//   }
