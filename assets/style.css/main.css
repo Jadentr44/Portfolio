@@ -51,19 +51,15 @@ nav{
   background-color: black;
 }
 
-.fa-gear{
-  font-size: 1.1rem;
-  -webkit-text-stroke: 2px black;
-  color: #FF5656;
-}
+
 
 
 #splash h1{
   -webkit-text-stroke: 1px white;
   color: white;
-  font-size: 500%;
+  font-size: 6vw;
 }
-#splash .link{
+#splash .subColor{
   -webkit-text-stroke: 2px black;
   /* color: #F7F4EE; */
 }
@@ -76,7 +72,7 @@ img{
   color: #FF5656;
 } 
 
-.link{
+.subColor{
   color: #FF5656;
   text-decoration: none;
 }
@@ -157,7 +153,7 @@ section{
     border: black solid 1px;
     width: 22vw;
     height: 22vw;
-    background-color: white;
+    background-color: gray;
     border-radius:50%;
   }
   
@@ -183,7 +179,3 @@ section{
 
 
 
-.big{
-  font-size: 20%;
-  transition: all 100ms linear;
-}

@@ -181,12 +181,34 @@ floatIn("JS Developer","emailText",200)
 
 
 
+$('#sendEmail').on('click',function(e){
+  $('#name').val()
+  $('#emailInput').val()
+  $('#message').val()
 
-
-
-
-
-
+  e.preventDefault();
+  Email.send({
+    Host: "smtp.elasticemail.com",
+    Username: "Rodriguez@jadent.dev",
+    Password: "2F6E580C10E2F37A9CE31BBFA1D2201DD125",
+    To: 'rodriguez@jadent.dev',
+    From: "rodriguez@jadent.dev",
+    Subject: `PORTFOLIO-FROM:${$('#name').val()}`,
+    Body: `
+    from: ${$('#name').val()}<br/>
+    email: ${$('.emailInput').val()}<br/>
+    <br/>
+    message:<br/>
+    ${$('#message').val()}
+    `,
+  })
+    .then(function (message) {
+      alert(message == "OK"?"email sent":"error in sending email")
+      $('#name').val("")
+      $('.emailInput').val("")
+      $('#message').val("")
+    });
+})
 
 
 
