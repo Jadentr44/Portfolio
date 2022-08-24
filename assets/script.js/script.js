@@ -182,11 +182,15 @@ floatIn("JS Developer","emailText",200)
 
 
 $('#sendEmail').on('click',function(e){
-  $('#name').val()
-  $('#emailInput').val()
-  $('#message').val()
-
   e.preventDefault();
+  let emailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if(!($('.emailInput').val().match(emailformat)) || !$('#message').val() || !$('#name').val()){
+    $('#formError').css('visibility','visible')
+    return
+  }
+  $('#formError').css('visibility','hidden')
+
+  
   Email.send({
     Host: "smtp.elasticemail.com",
     Username: "Rodriguez@jadent.dev",
@@ -203,7 +207,9 @@ $('#sendEmail').on('click',function(e){
     `,
   })
     .then(function (message) {
-      alert(message == "OK"?"email sent":"error in sending email")
+      if(message !== "OK" ) return
+
+      alert('Email Sent')
       $('#name').val("")
       $('.emailInput').val("")
       $('#message').val("")
