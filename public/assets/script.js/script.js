@@ -162,7 +162,7 @@ floatIn("JS Developer", "emailText", 200);
 $("#sendEmail").on("click", function (e) {
   e.preventDefault();
   // regex
-  let emailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  let emailformat = /^\S+@\S+$/;
 
   // checking if input is not valid
   if (

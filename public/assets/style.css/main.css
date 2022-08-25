@@ -1,6 +1,9 @@
 /* global */
-
+#contact{
+  overflow-x: hidden;
+}
 body{
+  
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
@@ -188,6 +191,7 @@ section{
   }
   95% {
     left: -25%;
+    transform: rotateY(180deg);
   }
   100% {
     left: -25%;    
