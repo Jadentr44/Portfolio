@@ -246,27 +246,30 @@ let imgSrc = 0
 
 
 
-moveRobot()
+// moveRobot()
 
 
-function moveRobot(){
-  let img = $("#robot")
-  let imgWidth = img.get(0).width
-  let screenWidth = $(window).width()
-  console.log('img width', imgWidth)
-     if(imgSrc%2==0){
-      img.css("transform" ,"scaleX(1)")
-       $("#robot").attr("src", "./img/robot.png");
-      img.css("left", -imgWidth).animate({
-        "left": screenWidth
-      }, 5000);
-     }else{
-      img.css("transform" ,"scaleX(-1)")
-      $("#robot").attr("src", "./img/robot-empty.png")
-      img.css("left",screenWidth).animate({
-        "left": -imgWidth
-      }, 5000);
-     }
-     imgSrc++;
-     setTimeout(moveRobot, 6000)
-}
+// function moveRobot(){
+//   console.log('run  function')
+//   let img = $("#robot")
+//   let imgWidth = img.get(0).width
+//   let screenWidth = $(window).width()
+//      if(imgSrc%2==0){
+//       console.log('left to right')
+//       img.css("transform" ,"scaleX(1)")
+//        $("#robot").attr("src", "./img/robot.png");
+//       img.css("left", -imgWidth).animate({
+//         "left": screenWidth
+//       }, 5000);
+//      }else{
+//       console.log("right to left")
+//       img.css("transform" ,"scaleX(-1)")
+//       $("#robot").attr("src", "./img/robot-empty.png")
+//       img.css("left",screenWidth).animate({
+//         "left": -imgWidth
+//       }, 5000);
+//      }
+//      imgSrc++;
+//      console.log(imgSrc)
+//      setTimeout(moveRobot, 5100)
+// }
