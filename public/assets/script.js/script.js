@@ -198,6 +198,9 @@ $('#sendEmail').on('click',function(e){
   //sending post to server to send email
   fetch('/sendEmail', {
     method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
     body: JSON.stringify({name:$('#name').val(),email:$('.emailInput').val(),message:$('#message').val()}),
   })
     .then((res) => res.json())
