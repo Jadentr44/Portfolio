@@ -14,14 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static('public'));
 
-// app.get('/', (req, res) =>
-//   res.sendFile(path.join(__dirname, '/public/index.html'))
-// );
-app.get('/', (req, res) => {
-  res.send(
-    `<p>API - An application programming interface, is a computing interface that defines interactions between multiple software intermediaries</p>`
-  );
-});
+
 //api call to send email to me
 app.post('/sendEmail', (req, res) =>{
 let emailInfo = req.body
