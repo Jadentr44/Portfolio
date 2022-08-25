@@ -190,51 +190,45 @@ $('#sendEmail').on('click',function(e){
   }
   $('#formError').css('visibility','hidden')
 
-  
-  Email.send({
-    Host: "smtp.elasticemail.com",
-    Username: "Rodriguez@jadent.dev",
-    Password: "2F6E580C10E2F37A9CE31BBFA1D2201DD125",
-    To: 'rodriguez@jadent.dev',
-    From: "rodriguez@jadent.dev",
-    Subject: `PORTFOLIO-FROM:${$('#name').val()}`,
-    Body: `
-    from: ${$('#name').val()}<br/>
-    email: ${$('.emailInput').val()}<br/>
-    <br/>
-    message:<br/>
-    ${$('#message').val()}
-    `,
+  fetch('/sendEmail', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({name:$('#name').val(),email:$('.emailInput').val(),message:$('#message').val()}),
   })
-    .then(function (message) {
-      if(message !== "OK" ) return
-
-      alert('Email Sent')
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data)
+      alert('Successful email sent');
       $('#name').val("")
       $('.emailInput').val("")
       $('#message').val("")
+      return 
+    })
+    .catch((error) => {
+      alert('Error in sending email', error);
     });
+  
 })
 
 
+let projectsInfo = {
+  Dart:{
+    name:"JavaScript Quiz",
+    desc:"a simple game that useses vanila javascript to quiz your javavacript syntax knolage",
+    full:"no",
+    githubLink:"",
+    liveLink:''
+  }
+}
 
-
-
-// function floatChange(text,divID){
-//   let div = $(`#${divID}`)
-//   let textArr = text.split("")
-//   let divTextArr = div.text()
-//   console.log(div.children().toArray())
-
-//   div.children().toArray().forEach((e,i) => {
-//     setTimeout(() => {
-//     e.animate({fontSize: "5%" }, 500 );
-//     },200*i)
-
-//     setTimeout(() => {
-//       e.remove()
-//       },300 * divTextArr.length)
-//   });
+$('.card').on('click',function(e){
+  console.log(e.currentTarget.id)
+  let info = projectsInfo[e.currentTarget.id]
+  $('#modalTitle').text(info.name)
+  $('#modalFull').text(info.full)
+  $('#modalDesc').text(info.desc)
   
-  
-//   }
+  $('#myModal').modal('show'); 
+})
