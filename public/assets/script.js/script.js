@@ -195,13 +195,17 @@ $('#sendEmail').on('click',function(e){
   // hiding 'invalid input' is the input was good
   $('#formError').css('visibility','hidden')
 
+
+  let name = $('#name').val()
+  let email = $('.emailInput').val()
+  let message = $('#message').val()
   //sending post to server to send email
   fetch('/sendEmail', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({name:$('#name').val(),email:$('.emailInput').val(),message:$('#message').val()}),
+    body: JSON.stringify({name:name,email:email,message:message}),
   })
     .then((res) => res.json())
     .then((data) => {
