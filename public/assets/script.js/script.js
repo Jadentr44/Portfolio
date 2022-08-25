@@ -190,7 +190,7 @@ $('#sendEmail').on('click',function(e){
   }
   $('#formError').css('visibility','hidden')
 
-  fetch('jadent.dev/sendEmail', {
+  fetch('/sendEmail', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
