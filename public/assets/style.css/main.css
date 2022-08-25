@@ -165,6 +165,35 @@ section{
 .modal a:hover{
   background-color: #FF5656;
 }
+
+#robot {
+  bottom: 0;
+  position: absolute;
+  -webkit-animation: linear infinite;
+  -webkit-animation-name: run;
+  -webkit-animation-duration: 15s;
+}
+@-webkit-keyframes run {
+  0% {
+    left: -25%;
+    transform: rotateY(0deg);
+  }
+  48% {
+    left: 100%;
+    transform: rotateY(0deg);
+  }
+  50%{
+    left: 110%;
+    transform: rotateY(180deg);
+  }
+  95% {
+    left: -25%;
+  }
+  100% {
+    left: -25%;    
+    transform: rotateY(180deg);
+  }
+}
 /* media queries */
 
 /* small devices: tablet and large phones 600 px and up */
