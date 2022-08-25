@@ -241,13 +241,35 @@ $(".card").on("click", function (e) {
   $("#myModal").modal("show");
 });
 
-let imgSrc = 1
+let imgSrc = 0
+
+
+
+
+moveRobot()
+imgSrc++;
 setInterval(function () {
-  if(imgSrc %2 == 0){
-    $('#robot').attr("src", "./img/robot.png");
-  }
-  else{
-    $('#robot').attr("src", "./img/robot-empty.png");
-  }
-  imgSrc++;
-}, 7100);
+  moveRobot()
+   imgSrc++
+}, 6000);
+
+
+function moveRobot(){
+  let img = $("#robot")
+  let imgWidth = img.get(0).width
+  let screenWidth = $(window).width()
+  console.log('img width', imgWidth)
+     if(imgSrc%2==0){
+      img.css("transform" ,"scaleX(1)")
+       $("#robot").attr("src", "./img/robot.png");
+      img.css("left", -imgWidth).animate({
+        "left": screenWidth
+      }, 5000);
+     }else{
+      img.css("transform" ,"scaleX(-1)")
+      $("#robot").attr("src", "./img/robot-empty.png")
+      img.css("left",screenWidth).animate({
+        "left": -imgWidth
+      }, 5000);
+     }
+}

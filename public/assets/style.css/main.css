@@ -167,13 +167,13 @@ section{
 .modal a:hover{
   background-color: #FF5656;
 }
-
+form{
+  z-index: 10;
+}
 #robot {
   bottom: 0;
   position: absolute;
-  -webkit-animation: linear infinite;
-  -webkit-animation-name: run;
-  -webkit-animation-duration: 15s;
+  z-index: 5;
   
 }
 
@@ -201,28 +201,7 @@ section{
     height: auto;
     
   }
-  @-webkit-keyframes run {
-    0% {
-      left: -65%;
-      transform: rotateY(0deg);
-    }
-    48% {
-      left: 100%;
-      transform: rotateY(0deg);
-    }
-    50%{
-      left: 110%;
-      transform: rotateY(180deg);
-    }
-    95% {
-      left: -65%;
-      transform: rotateY(180deg);
-    }
-    100% {
-      left: -65%;    
-      transform: rotateY(180deg);
-    }
-  }
+  
   .skillIcons img{
     border: black solid 1px;
     width: 22vw;
@@ -259,29 +238,7 @@ section{
     height: auto;
     
   }
-  @-webkit-keyframes run {
-    0% {
-      left: -25%;
-      transform: rotateY(0deg);
-    }
-    48% {
-      left: 100%;
-      transform: rotateY(0deg);
-    }
-    50%{
-      left: 110%;
-      transform: rotateY(180deg);
-    }
-    95% {
-      left: -25%;
-      transform: rotateY(180deg);
-    }
-    100% {
-      left: -25%;    
-      transform: rotateY(180deg);
-    }
-  }
-
+  
  
 }
 
