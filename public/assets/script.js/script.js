@@ -247,11 +247,6 @@ let imgSrc = 0
 
 
 moveRobot()
-imgSrc++;
-setInterval(function () {
-  moveRobot()
-   imgSrc++
-}, 6000);
 
 
 function moveRobot(){
@@ -272,4 +267,6 @@ function moveRobot(){
         "left": -imgWidth
       }, 5000);
      }
+     imgSrc++;
+     setTimeout(moveRobot, 6000)
 }
