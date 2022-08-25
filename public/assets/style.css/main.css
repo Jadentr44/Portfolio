@@ -1,6 +1,6 @@
 /* global */
-#contact{
-  overflow-x: hidden;
+*{
+  overflow: hidden;
 }
 body{
   
