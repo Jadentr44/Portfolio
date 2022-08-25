@@ -1,6 +1,6 @@
 /* global */
-*{
-  overflow: hidden;
+.modal, #contact{
+  overflow-x: hidden;
 }
 body{
   
@@ -132,7 +132,6 @@ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 section{
   min-height: 100vh;
   height: 100%;
-  padding: 5% 10% 5% 10%;
 }
 /* #sendEmail:active{
   transform: translateY(4px);
@@ -175,33 +174,16 @@ section{
   -webkit-animation: linear infinite;
   -webkit-animation-name: run;
   -webkit-animation-duration: 15s;
+  
 }
-@-webkit-keyframes run {
-  0% {
-    left: -25%;
-    transform: rotateY(0deg);
-  }
-  48% {
-    left: 100%;
-    transform: rotateY(0deg);
-  }
-  50%{
-    left: 110%;
-    transform: rotateY(180deg);
-  }
-  95% {
-    left: -25%;
-    transform: rotateY(180deg);
-  }
-  100% {
-    left: -25%;    
-    transform: rotateY(180deg);
-  }
-}
+
 /* media queries */
 
 /* small devices: tablet and large phones 600 px and up */
 @media only screen and (max-width:992px) {
+  section{
+    padding: 20% 10% 5% 10%;
+  }
   #splash img{
     display: none;
   }
@@ -214,7 +196,33 @@ section{
   .splashText h1{
     text-align: center;
   }
-
+  #robot{
+    width: 60%;
+    height: auto;
+    
+  }
+  @-webkit-keyframes run {
+    0% {
+      left: -65%;
+      transform: rotateY(0deg);
+    }
+    48% {
+      left: 100%;
+      transform: rotateY(0deg);
+    }
+    50%{
+      left: 110%;
+      transform: rotateY(180deg);
+    }
+    95% {
+      left: -65%;
+      transform: rotateY(180deg);
+    }
+    100% {
+      left: -65%;    
+      transform: rotateY(180deg);
+    }
+  }
   .skillIcons img{
     border: black solid 1px;
     width: 22vw;
@@ -227,6 +235,11 @@ section{
 
 /* large devices: tablet and large phones 992 px and up */
 @media only screen and (min-width: 992px) {
+  section{
+    min-height: 100vh;
+    height: 100%;
+    padding: 5% 10% 5% 10%;
+  }
   #splash img{
     visibility: visible;
   }
@@ -241,7 +254,33 @@ section{
     background-color: white;
     border-radius:50%;
   }
-
+  #robot{
+    width: 25%;
+    height: auto;
+    
+  }
+  @-webkit-keyframes run {
+    0% {
+      left: -25%;
+      transform: rotateY(0deg);
+    }
+    48% {
+      left: 100%;
+      transform: rotateY(0deg);
+    }
+    50%{
+      left: 110%;
+      transform: rotateY(180deg);
+    }
+    95% {
+      left: -25%;
+      transform: rotateY(180deg);
+    }
+    100% {
+      left: -25%;    
+      transform: rotateY(180deg);
+    }
+  }
 
  
 }
