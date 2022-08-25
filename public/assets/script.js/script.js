@@ -196,6 +196,7 @@ $("#sendEmail").on("click", function (e) {
       // clearing inputs and alerting the email was good
       console.log(data);
       alert("Successful email sent");
+      moveRobot()
       $("#name").val("");
       $(".emailInput").val("");
       $("#message").val("");
@@ -244,9 +245,24 @@ $(".card").on("click", function (e) {
 let imgSrc = 0
 
 
+let img = $("#robot")
+  let imgWidth = img.get(0).width
+  let screenWidth = $(window).width()
+
+  img.css('left',`${imgWidth/screenWidth/3*100}%`)
 
 
-// moveRobot()
+function moveRobot(){
+    img.animate({
+              "left": '100%'
+            }, 5000);
+            setTimeout(() => {
+              img.css("left", -imgWidth).animate({
+                "left": `${imgWidth/screenWidth/3*100}%`
+              }, 3000);
+            }, 7000)
+  }
+// 
 
 
 // function moveRobot(){
