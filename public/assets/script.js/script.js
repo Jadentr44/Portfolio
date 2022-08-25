@@ -199,6 +199,9 @@ $('#sendEmail').on('click',function(e){
   let name = $('#name').val()
   let email = $('.emailInput').val()
   let message = $('#message').val()
+  console.log(name)
+  console.log(email);
+  console.log(message);
   //sending post to server to send email
   fetch('/sendEmail', {
     method: 'POST',
