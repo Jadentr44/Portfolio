@@ -131,7 +131,40 @@ section{
   height: 100%;
   padding: 5% 10% 5% 10%;
 }
+/* #sendEmail:active{
+  transform: translateY(4px);
+  box-shadow: 0 0px #c04040;
+}
+#sendEmail{
+  
+  box-shadow: 0 3px #e04c4c;
+} */
+#sendEmail{
+  border: 3px black solid;
+  background-color: #FF5656;
+  color: black;
+} 
+#sendEmail:hover{
+  font-weight: bolder;
+  border: 3px #FF5656 solid;
+  background-color: black;
+  color: #FF5656;
+} 
 
+#contact svg:hover{
+  color: black;
+  background-color: #FF5656;
+}
+#contact svg{
+  border-radius: 50%;
+  
+}
+.modal a, .modal button{
+  background-color: #FF5656;
+}
+.modal a:hover{
+  background-color: #FF5656;
+}
 /* media queries */
 
 /* small devices: tablet and large phones 600 px and up */

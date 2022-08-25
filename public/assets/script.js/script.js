@@ -210,19 +210,33 @@ $("#sendEmail").on("click", function (e) {
 
 let projectsInfo = {
   Dart: {
-    name: "JavaScript Quiz",
-    desc: "a simple game that useses vanila javascript to quiz your javavacript syntax knolage",
-    full: "no",
+    warning:"Warning:API keys are currently not active",
+    name: "Dart on The Map",
+    desc: "a concept website that allows the user to search a location, and get local data,weather, and a currency converter",
+    technologies: "HTML,Bulma,Jquery,local storage",
+    role:"set up API's to render information to the page",
     githubLink: "",
     liveLink: "",
   },
+  Battle: {
+    warning:"Warning: certain browsers and ad blockers cause issues. To test personally, I use chrome on my desktop and phone to connect",
+    name: "Battle of The Shadow Tomb",
+    desc: "a full stack game that allows 2 players to play a back and forth online pvp game",
+    technologies: "HTML,Bootstrap,Javascript,Node.js,Express,MySQL",
+    role:"develop server, manage DB, tweak API calls",
+    githubLink: "",
+    liveLink: "",
+  }
 };
 
 $(".card").on("click", function (e) {
   let info = projectsInfo[e.currentTarget.id];
   $("#modalTitle").text(info.name);
-  $("#modalFull").text(info.full);
+  $("#modalTechnologies").text(info.technologies);
   $("#modalDesc").text(info.desc);
+  $("#modalRole").text(info.role);
+  $("#modalWarning").text(info.warning);
+  
 
   $("#myModal").modal("show");
 });
