@@ -179,17 +179,23 @@ floatIn("JS Developer","emailText",200)
 
 
 
-
+// fetch to send email
 
 $('#sendEmail').on('click',function(e){
   e.preventDefault();
+  // regex
   let emailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+  // checking if input is not valid
   if(!($('.emailInput').val().match(emailformat)) || !$('#message').val() || !$('#name').val()){
     $('#formError').css('visibility','visible')
     return
   }
+
+  // hiding 'invalid input' is the input was good
   $('#formError').css('visibility','hidden')
 
+  //sending post to server to send email
   fetch('/sendEmail', {
     method: 'POST',
     headers: {
@@ -199,6 +205,7 @@ $('#sendEmail').on('click',function(e){
   })
     .then((res) => res.json())
     .then((data) => {
+      // clearing inputs and alerting the email was good
       console.log(data)
       alert('Successful email sent');
       $('#name').val("")
@@ -207,7 +214,9 @@ $('#sendEmail').on('click',function(e){
       return 
     })
     .catch((error) => {
-      alert('Error in sending email', error);
+      // if theres an error alert the bad email and console log the error
+      alert('Error in sending email');
+      console.log(error)
     });
   
 })
