@@ -240,3 +240,14 @@ $(".card").on("click", function (e) {
 
   $("#myModal").modal("show");
 });
+
+let imgSrc = 1
+setInterval(function () {
+  if(imgSrc %2 == 0){
+    $('#robot').attr("src", "./img/robot.png");
+  }
+  else{
+    $('#robot').attr("src", "./img/robot-empty.png");
+  }
+  imgSrc++;
+}, 7100);
