@@ -95,10 +95,7 @@ box-shadow: 0 10px 20px rgba(255,0,0,.6), 0 4px 8px rgba(200,0,0,.6);
 border: #FF5656 solid 3px;
 }
 
-h2{
-  font-size: 4vw;
-  text-align: center;
-}
+
 
 
 
@@ -176,11 +173,20 @@ form{
   z-index: 5;
   
 }
-
+#aboutMe h4{
+  font-size: 2vw;
+}
+#aboutMe p{
+  font-size: 1vw;
+}
 /* media queries */
 
 /* small devices: tablet and large phones 600 px and up */
 @media only screen and (max-width:992px) {
+  h2{
+    font-size: 10vw;
+    text-align: center;
+  }
   section{
     padding: 20% 10% 5% 10%;
   }
@@ -214,6 +220,10 @@ form{
 
 /* large devices: tablet and large phones 992 px and up */
 @media only screen and (min-width: 992px) {
+  h2{
+    font-size: 4vw;
+    text-align: center;
+  }
   section{
     min-height: 100vh;
     height: 100%;
