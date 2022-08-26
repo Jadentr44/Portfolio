@@ -173,12 +173,7 @@ form{
   z-index: 5;
   
 }
-#aboutMe h4{
-  font-size: 2vw;
-}
-#aboutMe p{
-  font-size: 1vw;
-}
+
 /* media queries */
 
 /* small devices: tablet and large phones 600 px and up */
@@ -214,6 +209,12 @@ form{
     height: 22vw;
     background-color: white;
     border-radius:50%;
+  }
+  #aboutMe h4{
+    font-size: 5vw;
+  }
+  #aboutMe p{
+    font-size: 3vw;
   }
   
 }
