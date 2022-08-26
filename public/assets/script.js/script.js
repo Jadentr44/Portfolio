@@ -215,18 +215,36 @@ let projectsInfo = {
     name: "Dart on The Map",
     desc: "a concept website that allows the user to search a location, and get local data,weather, and a currency converter",
     technologies: "HTML,Bulma,Jquery,local storage",
-    role:"set up API's to render information to the page",
-    githubLink: "",
-    liveLink: "",
+    role:"Team Javascript manager, set up API's to render information to the page",
+    githubLink: "https://github.com/Jadentr44/Dart-On-The-Map",
+    liveLink: "https://jadentr44.github.io/Dart-On-The-Map/",
   },
   Battle: {
     warning:"Warning: certain browsers and ad blockers cause issues. To test personally, I use chrome on my desktop and phone to connect",
     name: "Battle of The Shadow Tomb",
     desc: "a full stack game that allows 2 players to play a back and forth online pvp game",
     technologies: "HTML,Bootstrap,Javascript,Node.js,Express,MySQL",
-    role:"develop server, manage DB, tweak API calls",
-    githubLink: "",
-    liveLink: "",
+    role:"Team Javascript manager, develop server, manage DB, tweak API calls",
+    githubLink: "https://github.com/Jadentr44/Battle-of-the-shadow-tomb",
+    liveLink: "https://the-shadow-tome.herokuapp.com/",
+  },
+  Quiz:{
+    warning:"",
+    name: "Javascript Quiz",
+    desc: "a simple javascript game, that test your javascript syntax knowledge, storing your score in local storage",
+    technologies: "HTML, CSS, Javascript, local storage",
+    role:"develop whole app",
+    githubLink: "https://github.com/Jadentr44/Challenge-04-Javascript-trivia",
+    liveLink: "https://jadentr44.github.io/Challenge-04-Javascript-trivia/",
+  },
+  Planner:{
+    warning:"",
+    name: "Daily Task Tracker",
+    desc: "a simple javascript app to plan out your day, storing information into local storage",
+    technologies: "HTML, CSS, Javascript, local storage",
+    role:"develop whole app",
+    githubLink: "https://github.com/Jadentr44/Daily-Task-Tracker",
+    liveLink: "https://jadentr44.github.io/Daily-Task-Tracker/",
   }
 };
 
@@ -237,7 +255,8 @@ $(".card").on("click", function (e) {
   $("#modalDesc").text(info.desc);
   $("#modalRole").text(info.role);
   $("#modalWarning").text(info.warning);
-  
+  $("#depLink").attr("href", info.liveLink)
+  $("#githubLink").attr("href", info.githubLink)
 
   $("#myModal").modal("show");
 });
@@ -265,27 +284,3 @@ function moveRobot(){
 // 
 
 
-// function moveRobot(){
-//   console.log('run  function')
-//   let img = $("#robot")
-//   let imgWidth = img.get(0).width
-//   let screenWidth = $(window).width()
-//      if(imgSrc%2==0){
-//       console.log('left to right')
-//       img.css("transform" ,"scaleX(1)")
-//        $("#robot").attr("src", "./img/robot.png");
-//       img.css("left", -imgWidth).animate({
-//         "left": screenWidth
-//       }, 5000);
-//      }else{
-//       console.log("right to left")
-//       img.css("transform" ,"scaleX(-1)")
-//       $("#robot").attr("src", "./img/robot-empty.png")
-//       img.css("left",screenWidth).animate({
-//         "left": -imgWidth
-//       }, 5000);
-//      }
-//      imgSrc++;
-//      console.log(imgSrc)
-//      setTimeout(moveRobot, 5100)
-// }
